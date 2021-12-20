@@ -1,0 +1,559 @@
+@font-face {
+    src: url(../fonts/Cairo-VariableFont_wght.ttf);
+    font-family: cairo;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 0;
+    font-family: "cairo", Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+::selection {
+    background: rgb(0, 37, 68);
+    color: white;
+}
+
+nav {
+    height: 20%;
+    background-color: rgb(16, 131, 116);
+}
+
+nav ul {
+    list-style-type: none;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(8, 1fr);
+    margin: 0;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    text-align: left;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    line-height: 100px;
+    transition: .2s;
+}
+
+ul li a:hover {
+    color: coral;
+    font-weight: 600;
+}
+
+nav ul li .selected {
+    color: coral;
+    font-weight: Bold;
+}
+
+main section {
+    border-top: 3px solid #23786D;
+}
+
+main .principle, main .about-us {
+    background-color: #19BBA4;
+    padding: 30px;
+}
+
+main .principle div .text, main .about-us div .text {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main .principle div .text h1, main .principle div .text h3 {
+    text-align: center;
+    color: white;
+}
+
+main .about-us div .text h1, main .about-us div .text h3 {
+    text-align: left;
+    color: white;
+    padding-left: 30px;
+}
+
+main .principle div .text h3, main .about-us div .text h3 {
+    color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 20px;
+}
+
+.img {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+main .principle div .img p {
+    width: 60vw;
+    height: 200px;
+    order: 1;
+    padding: 25px;
+    font-size: 18px;
+}
+
+main .principle .img img {
+    width: 480px;
+    height: 480px;
+    order: -1;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(252, 250, 250, 0.4);
+}
+
+main .about-us div .img p {
+    width: 60vw;
+    height: 200px;
+    order: -1;
+    padding: 25px;
+    font-size: 18px;
+}
+
+main .about-us .img img {
+    width: 480px;
+    height: 480px;
+    order: 1;
+    box-shadow: 0px 5px 10px rgba(252, 250, 250, 0.4);
+    border-radius: 10% 20%;
+}
+
+main .testimonials {
+    background-color: #32AA99;
+    padding: 30px;
+}
+
+main .testimonials div h1, main .testimonials div h3 {
+    text-align: center;
+    color: white;
+}
+
+main .testimonials div .text h3 {
+    color: rgba(255, 255, 255, 0.733);
+    padding-bottom: 20px;
+}
+
+main .testimonials div .testim {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+main .testimonials div .testim .box {
+    height: 200px;
+    background-color: #ecececc9;
+    margin-left: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    border-left: 5px solid tomato;
+}
+
+main .testimonials div .testim .box .text1 {
+    text-align: center;
+    padding: 5px
+}
+
+main .testimonials div .testim .box .name {
+    color: rgb(245, 102, 77)
+}
+
+main .mission {
+    background-color: #32AA99;
+    color: white;
+    padding: 30px;
+}
+
+main .vision {
+    background-color: #23786D;
+    color: white;
+    padding: 30px;
+}
+
+main .mission h1, main .vision h1 {
+    text-align: center;
+}
+
+main .mission h3, main .vision h3 {
+    color: rgba(255, 255, 255, 0.733);
+    text-align: center;
+}
+
+main .mission ul, main .vision ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+main .mission ul li, main .vision ul li {
+    position: relative;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+main .mission ul li::before, main .vision ul li::before {
+    content: "";
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent #ffffff94;
+    border-radius: 10px 10px;
+    position: absolute;
+    top: 8px;
+    left: -5px;
+}
+
+main .photos {
+    padding: 15px 0 30px;
+    margin: 0 auto;
+}
+
+main .photos input {
+    display: none;
+}
+
+main .photos .container {
+    text-align: center;
+}
+
+main .photos .container h1 {
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+main .photos .container h1::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 4px;
+    background-color: #108374;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+main .photos .container .top-content {
+    width: 100%;
+    margin: 0 auto 20px;
+    background-color: #044f45;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+main .photos .container .top-content label {
+    display: inline-block;
+    height: 100%;
+    margin: 0 25px;
+    line-height: 60px;
+    font-size: 18px;
+    color: rgba(238, 238, 238, 0.91);
+    cursor: pointer;
+    transition: color .5s;
+}
+
+main .photos .container .top-content label:hover {
+    color: white;
+    font-weight: 600;
+}
+
+main .photos .container .photo-gallery {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin: 0 auto;
+}
+
+main .photos .container .photo-gallery .pic {
+    position: relative;
+    height: 230px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px lightgray;
+    transition: .5s;
+}
+
+main .photos .container .photo-gallery .pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+main .photos #check1:checked~.container .photo-gallery .pic {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+main .photos #check2:checked~.container .photo-gallery .class {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+main .photos #check2:checked~.container .photo-gallery .star,
+main .photos #check2:checked~.container .photo-gallery .fun,
+main .photos #check2:checked~.container .photo-gallery .trip,
+main .photos #check2:checked~.container .photo-gallery .other {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+main .photos #check3:checked~.container .photo-gallery .star {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+main .photos #check3:checked~.container .photo-gallery .class,
+main .photos #check3:checked~.container .photo-gallery .fun,
+main .photos #check3:checked~.container .photo-gallery .trip,
+main .photos #check3:checked~.container .photo-gallery .other {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+main .photos #check4:checked~.container .photo-gallery .fun {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+main .photos #check4:checked~.container .photo-gallery .class,
+main .photos #check4:checked~.container .photo-gallery .star,
+main .photos #check4:checked~.container .photo-gallery .trip,
+main .photos #check4:checked~.container .photo-gallery .other {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+main .photos #check5:checked~.container .photo-gallery .trip {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+main .photos #check5:checked~.container .photo-gallery .class,
+main .photos #check5:checked~.container .photo-gallery .star,
+main .photos #check5:checked~.container .photo-gallery .fun,
+main .photos #check5:checked~.container .photo-gallery .other {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+main .photos #check6:checked~.container .photo-gallery .other {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+main .photos #check6:checked~.container .photo-gallery .class,
+main .photos #check6:checked~.container .photo-gallery .star,
+main .photos #check6:checked~.container .photo-gallery .fun,
+main .photos #check6:checked~.container .photo-gallery .trip {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+main .contact .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+
+main .contact .container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/school-bus.jpg") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+main .contact .container .content-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+main .contact .container .content-box .left {
+    height: 100%;
+    background: url("../img/school-bus.jpg") no-repeat center;
+    background-size: cover;
+}
+
+main .contact .container .content-box .right {
+    padding: 25px 40px;
+    background-color: white;
+    ;
+}
+
+main .contact .container .content-box .right h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+main .contact .container .content-box .right h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #09aa94;
+}
+
+main .contact .container .content-box .right .field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+main .contact .container .content-box .right .field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main .contact .container .content-box .right .field:focus {
+    background-color: #fff;
+    border: 2px solid #64d0c28a;
+}
+
+main .contact .container .content-box .right .area {
+    min-height: 150px;
+    resize: none;
+}
+
+main .contact .container .content-box .right .btn {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.1rem;
+    background-color: #09aa94;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+main .contact .container .content-box .right .btn:hover {
+    background-color: #0a4d44;
+    color: #fff;
+}
+
+footer .main {
+    background-color: #0A4D44;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+footer .main .info .social {
+    display: flex;
+    flex-flow: row;
+    padding: 5px;
+}
+
+footer .main .info .social img {
+    display: inline-block;
+    justify-self: flex-start;
+    cursor: pointer;
+    filter: grayscale(90%);
+    transition: filter .5s;
+}
+
+footer .main .info .social img:hover {
+    filter: grayscale(0);
+}
+
+footer .main .info .social .link {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+    justify-self: flex-end;
+    color: rgb(255, 255, 255);
+}
+
+footer .main .sitemap h3 {
+    color: rgb(255, 255, 255);
+}
+
+footer .main .sitemap ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+footer .main .sitemap ul a {
+    text-decoration: none;
+}
+
+footer .main .sitemap ul a li {
+    padding: 0;
+    color: #95ffee;
+}
+
+footer .main .sitemap ul a li:hover {
+    color: tomato;
+}
+
+footer .copyright {
+    background-color: #07332D;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .copyright p {
+    margin: 10px auto
+}
